@@ -9,17 +9,20 @@ const BookCard = ({ book }: BookDataProps) => {
     const {
         bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing,
     } = book;
+    console.log(image)
 
     return (
         <div className="group w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
             {/* Image */}
             <div className="relative h-72 overflow-hidden bg-gray-100">
+                
                 <Image
                     src={image}
                     alt={bookName}
                     width={300}
                     height={300}
+                    unoptimized
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
