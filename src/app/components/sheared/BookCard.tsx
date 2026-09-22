@@ -1,5 +1,6 @@
 import Image from "next/image";
 import IBooks from "@/app/types/Book.types";
+import Link from "next/link";
 
 interface BookDataProps {
     book: IBooks;
@@ -16,7 +17,7 @@ const BookCard = ({ book }: BookDataProps) => {
 
             {/* Image */}
             <div className="relative h-72 overflow-hidden bg-gray-100">
-                
+
                 <Image
                     src={image}
                     alt={bookName}
@@ -93,9 +94,11 @@ const BookCard = ({ book }: BookDataProps) => {
                 </div>
 
                 {/* Button */}
-                <button className="mt-5 w-full rounded-xl bg-indigo-600 px-4 py-3 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg active:scale-95">
-                    View Details →
-                </button>
+                <Link href={`/books/${book.bookId}`}>
+                    <button className="mt-5 w-full rounded-xl bg-indigo-600 px-4 py-3 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg active:scale-95">
+                        View Details →
+                    </button>
+                </Link>
             </div>
         </div>
     );
