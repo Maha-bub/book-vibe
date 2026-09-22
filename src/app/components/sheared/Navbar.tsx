@@ -6,7 +6,7 @@ const links =
         <li><Link className='btn btn-outline' href={`/`}>Home</Link></li>
         <li><Link className='btn btn-outline' href={`/`}>About</Link></li>
         <li><Link className='btn btn-outline' href={`/`}>Contact</Link></li>
-        <li><Link className='btn btn-outline' href={`/`}>Services</Link></li>
+        <li><Link className='btn btn-outline' href={`/books`}>Books</Link></li>
     </>
 const Navbar = () => {
     return (
