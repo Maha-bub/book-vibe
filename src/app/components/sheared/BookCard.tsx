@@ -22,7 +22,7 @@ const BookCard = ({ book }: BookDataProps) => {
                     alt={bookName}
                     width={300}
                     height={300}
-                    unoptimized
+                    // unoptimized(some time imgbb url optimize is no working)
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
