@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import logo from '@/assets/book.ico'
 const links =
     <>
         <li><Link className='btn btn-outline' href={`/`}>Home</Link></li>
@@ -21,7 +22,11 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <Link href={'/'} className="btn btn-ghost text-xl flex ">
+
+                    <Image src={logo} alt='logo'></Image>
+                    daisyUI
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-2 flex gap-2">
@@ -29,8 +34,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-soft">Button</a>
-                <a className="btn bg-success">Button</a>
+                <a className="btn btn-secondary rounded-r-none"> Sign up </a>
+                <a className="btn bg-success rounded-l-none"> Sign in </a>
             </div>
         </div>
     );
