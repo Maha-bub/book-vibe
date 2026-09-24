@@ -7,6 +7,7 @@ const links =
         <li><Link className='btn btn-outline' href={`/`}>About</Link></li>
         <li><Link className='btn btn-outline' href={`/`}>Contact</Link></li>
         <li><Link className='btn btn-outline' href={`/books`}>Books</Link></li>
+        <li><Link className='btn btn-outline' href={`/listed-books`}>ListedBooks</Link></li>
     </>
 const Navbar = () => {
     return (
