@@ -23,7 +23,7 @@ const BookDetailPage = async ({ params }: BookDataProps) => {
 
     const book = bookData.find(
         (book:IBooks) => book.bookId === Number(bookId)
-    );
+    )as IBooks;
 
     if (!book) {
         return (
