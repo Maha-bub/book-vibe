@@ -1,4 +1,5 @@
 
+import ReadButton from "@/app/components/bookDetails/ReadButton";
 import IBooks from "@/app/types/Book.types";
 import Image from "next/image";
 
@@ -119,9 +120,7 @@ const BookDetailPage = async ({ params }: BookDataProps) => {
 
                     {/* Action */}
                     <div className="card-actions justify-end mt-6">
-                        <button className="btn btn-primary">
-                            Read Book
-                        </button>
+                       <ReadButton book={book}></ReadButton>
 
                         <button className="btn btn-outline">
                             Add to Wishlist
