@@ -10,7 +10,7 @@ const BookCard = ({ book }: BookDataProps) => {
     const {
         bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing,
     } = book;
-    console.log(image)
+    // console.log(image)
 
     return (
         <div className="group w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">

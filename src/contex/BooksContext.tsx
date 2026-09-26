@@ -8,9 +8,9 @@ export const BooksContext = createContext({})
 
 const BooksProvider = ({ children }: ChildrenProps) => {
     const [readBooks, setReadBooks] = useState([])
-    const [listBooks, setListBooks] = useState([])
+    const [wishlistBooks, setWishListBooks] = useState([])
     const shearedData = {
-        readBooks, setReadBooks, listBooks, setListBooks
+        readBooks, setReadBooks, wishlistBooks, setWishListBooks
     }
     return (
         <BooksContext.Provider value={shearedData}>

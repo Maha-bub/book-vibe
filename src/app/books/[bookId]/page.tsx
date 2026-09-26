@@ -1,5 +1,6 @@
 
 import ReadButton from "@/app/components/bookDetails/ReadButton";
+import WishListButton from "@/app/components/bookDetails/wishListButton";
 import IBooks from "@/app/types/Book.types";
 import Image from "next/image";
 
@@ -23,8 +24,8 @@ const BookDetailPage = async ({ params }: BookDataProps) => {
     const { bookId } = await params;
 
     const book = bookData.find(
-        (book:IBooks) => book.bookId === Number(bookId)
-    )as IBooks;
+        (book: IBooks) => book.bookId === Number(bookId)
+    ) as IBooks;
 
     if (!book) {
         return (
@@ -120,11 +121,9 @@ const BookDetailPage = async ({ params }: BookDataProps) => {
 
                     {/* Action */}
                     <div className="card-actions justify-end mt-6">
-                       <ReadButton book={book}></ReadButton>
+                        <ReadButton book={book}></ReadButton>
 
-                        <button className="btn btn-outline">
-                            Add to Wishlist
-                        </button>
+                        <WishListButton book={book}></WishListButton>
                     </div>
 
                 </div>
